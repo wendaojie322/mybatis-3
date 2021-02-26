@@ -94,7 +94,9 @@ public class CachingExecutor implements Executor {
       throws SQLException {
     Cache cache = ms.getCache();
     if (cache != null) {
+      // flushCache 作用于于二级缓存
       flushCacheIfRequired(ms);
+      // useCache 用作二级缓存
       if (ms.isUseCache() && resultHandler == null) {
         ensureNoOutParams(ms, boundSql);
         @SuppressWarnings("unchecked")

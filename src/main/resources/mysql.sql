@@ -1,0 +1,7 @@
+
+
+CREATE TABLE BLOG (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(20),
+    description VARCHAR(100)
+)
